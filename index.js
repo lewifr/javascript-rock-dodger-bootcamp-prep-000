@@ -59,7 +59,7 @@ function createRock(x) {
   * it to GAME and move it downwards.
   */
 
-  game.append(rock)
+  GAME.appendChild(rock)
 
 console.log(ROCKS.length)
   /**
@@ -77,7 +77,8 @@ console.log(ROCKS.length)
     if (top < 380) {
       window.requestAnimationFrame(moveRock)
     } else {
-      rock.remove()
+      GAME.removeChild(rock)
+      ROCKS.shift()
     }
   }
 
