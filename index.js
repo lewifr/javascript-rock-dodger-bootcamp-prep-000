@@ -149,9 +149,6 @@ function moveDodgerRight() {
   }
 }
 
-  window.requestAnimationFrame(step)
-}
-
 /**
 * @param {string} p The position property
 * @returns {number} The position as an integer (without 'px')
