@@ -167,7 +167,7 @@ function moveDodgerRight() {
     var left = positionToInteger(DODGER.style.left)
     DODGER.style.left = `${left + 1}px`
 
-    if (++count < 4) {
+    if (++count < 40) {
       window.requestAnimationFrame(step)
     }
   }
