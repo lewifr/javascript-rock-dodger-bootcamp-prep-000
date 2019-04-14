@@ -103,6 +103,9 @@ function endGame() {
   ROCKS.map((rock) => rock.remove())
   document.removeEventListener('keydown', moveDodger)
   alert('YOU LOSE!')
+
+  START.innerHTML = 'Play again?'
+  START.style.display = 'inline'
 }
 
 function moveDodger(e) {
