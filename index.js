@@ -140,13 +140,24 @@ function moveDodgerLeft() {
   window.requestAnimationFrame(step)
 }
 
-
 function moveDodgerRight() {
-  const left = positionToInteger(dodger.style.left);
-  if (left < GAME_WIDTH - 40){
-    dodger.style.left = `${left + 2}px`;
-    window.requestAnimationFrame(moveDodgerRight);
+  var count = 0
+
+  if (positionToInteger(DODGER.style.left) >= 360) {
+    DODGER.style.left = `360px`
+    return
   }
+
+  function step() {
+    var left = positionToInteger(DODGER.style.left)
+    DODGER.style.left = `${left + 1}px`
+
+    if (++count < 10) {
+      window.requestAnimationFrame(step)
+    }
+  }
+
+  window.requestAnimationFrame(step)
 }
 
 /**
