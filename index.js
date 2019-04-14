@@ -128,7 +128,7 @@ function moveDodgerLeft() {
     var left = positionToInteger(DODGER.style.left)
     DODGER.style.left = `${left - 1}px`
 
-    if (++count < 4) {
+    if (++count < 10) {
       window.requestAnimationFrame(step)
     }
   }
@@ -148,7 +148,7 @@ function moveDodgerRight() {
     var left = positionToInteger(DODGER.style.left)
     DODGER.style.left = `${left + 1}px`
 
-    if (++count < 40) {
+    if (++count < 10) {
       window.requestAnimationFrame(step)
     }
   }
