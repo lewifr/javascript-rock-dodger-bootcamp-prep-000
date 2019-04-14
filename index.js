@@ -138,6 +138,11 @@ function moveDodger(e) {
 function moveDodgerLeft() {
   var count = 0
 
+  if (positionToInteger(DODGER.style.left) <= 0) {
+    DODGER.style.left = `0px`
+    return
+  }
+
   function step() {
     var left = positionToInteger(DODGER.style.left)
     DODGER.style.left = `${left - 1}px`
