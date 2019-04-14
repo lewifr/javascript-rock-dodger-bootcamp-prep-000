@@ -77,7 +77,7 @@ console.log(ROCKS.length)
     if (top < 380) {
       window.requestAnimationFrame(moveRock)
     } else {
-      GAME.removeChild(rock)
+      rock.remove()
       ROCKS.shift()
     }
   }
